@@ -4,15 +4,6 @@ $(function()
     function after_form_submitted(data) 
     {
 
-        // alert("HELLO123");
-        // alert(data.status)
-
-        // if(xhr.readyState == 4 && xhr.status == 200) {
-        //     // alert(data.responseText);
-        //     //alert("AWESOME PEOPLE");
-        // }
-
-
         if(data.status == 201 || data.status == 200)
         {
             $('#success_message').show();
@@ -100,7 +91,7 @@ $(function()
                 "patient_email": patientEmail,
                 "patient_message" : patientMessage,
                 "patient_phone" : patientPhone,
-                "patient_time" : patientTime
+                // "patient_time" : patientTime
             },
             "messageVersions":[
                 
@@ -126,13 +117,13 @@ $(function()
                 // Definition for Message Version 2
                 {
                     "to":[
+                        // {
+                        // "email":"umerkhattab42@gmail.com",
+                        // "name":"Owais"
+                        // },
                         {
-                        "email":"umerkhattab42@gmail.com",
-                        "name":"Owais"
-                        },
-                        {
-                        "email":"umer_khattab@live.com",
-                        "name":"Mark Payton"
+                        "email": patientEmail,
+                        "name": patientName
                         },
                         // {
                         // "email":"andrea@example.com",
@@ -149,7 +140,7 @@ $(function()
             const xhr = new XMLHttpRequest();
                   xhr.open("POST", "https://api.brevo.com/v3/smtp/email");
                   xhr.setRequestHeader("accept", "application/json")
-                  xhr.setRequestHeader("api-key", "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")
+                  xhr.setRequestHeader("api-key", "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")
                   xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8")
                   xhr.onreadystatechange = function() {
                         after_form_submitted(xhr);   
