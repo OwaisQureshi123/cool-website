@@ -140,7 +140,7 @@ $(function()
             const xhr = new XMLHttpRequest();
                   xhr.open("POST", "https://api.brevo.com/v3/smtp/email");
                   xhr.setRequestHeader("accept", "application/json")
-                  xhr.setRequestHeader("api-key", process.env.EMAIL_API_KEY)
+                  xhr.setRequestHeader("api-key", "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")
                   xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8")
                   xhr.onreadystatechange = function() {
                         after_form_submitted(xhr);   
